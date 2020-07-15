@@ -1,0 +1,39 @@
+@media (max-width: 576px) {
+
+    .mb-xs-2
+    {
+        margin-bottom: .5rem!important
+    }
+
+    .pl-xs-1
+    {
+       padding-left: .25rem!important;
+    }
+
+    .pr-xs-1
+    {
+        padding-right: .25rem!important;
+    }
+
+    .persons-container
+    {
+        min-height: 328px;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .persons-container
+    {
+        min-height: 256px;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}

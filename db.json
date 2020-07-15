@@ -1,0 +1,44 @@
+{
+  "persons": [
+    {
+      "name": "Julius Plass",
+      "dob": "10.07.1995",
+      "email": "julius.plass@hotmail.com",
+      "phone": "0676 50 67 975",
+      "creation": 1594813102,
+      "id": 1
+    },
+    {
+      "name": "John Doe",
+      "dob": "01.01.1970",
+      "email": "john@test.com",
+      "phone": "1234",
+      "creation": 1594813125,
+      "id": 2
+    },
+    {
+      "name": "Jane Doe",
+      "dob": "01.01.1970",
+      "email": "jane@test.com",
+      "phone": "0660 12 34 567",
+      "creation": 1594813143,
+      "id": 3
+    },
+    {
+      "name": "Test Person",
+      "dob": "08.01.1990",
+      "email": "test@test.com",
+      "phone": "4567",
+      "creation": 1594813189,
+      "id": 4
+    },
+    {
+      "name": "Test",
+      "dob": "01.01.1000",
+      "email": "test@test.com",
+      "phone": "0676 12 34 567",
+      "creation": 1594813288,
+      "id": 5
+    }
+  ]
+}

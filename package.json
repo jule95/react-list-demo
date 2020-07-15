@@ -1,0 +1,41 @@
+{
+  "name": "webpack-materialize-template",
+  "version": "1.0.0",
+  "description": "a starter project for materialize projects",
+  "main": "app.js",
+  "repository": "https://github.com/jule95/webpack-materialize-template",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "author": "jule95",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "expose-loader": "^0.7.5",
+    "jquery": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "react-bootstrap": "^1.0.0-beta.16",
+    "webpack-combine-loaders": "^2.0.4"
+  }
+}

@@ -1,0 +1,72 @@
+@import "./modal.css";
+@import "./form.css";
+@import "./overrides.css";
+@import "persons.css";
+@import "./cockpit.css";
+@import "./responsive.css";
+@import "./pagination.css";
+
+/*tags*/
+input
+{
+    padding-left: 3px;
+    outline: none;
+    border:none;
+    border-bottom:1px solid gray;
+}
+
+input:focus
+{
+    border-bottom:1px solid #007bff;
+}
+
+body
+{
+    overflow-y:scroll;
+}
+
+/*classes*/
+
+.bold
+{
+    font-weight: 600;
+}
+
+.full-width
+{
+    width: 100%;
+}
+
+.pointer
+{
+    cursor: pointer;
+}
+
+.pointer:hover
+{
+    font-weight:500;
+}
+
+.section
+{
+    margin-bottom: 15px;
+}
+
+.shadow
+{
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 4px gray;
+    border-radius: 5px;
+}
+
+.uppercase
+{
+    text-transform: uppercase;
+}
+
+/*ids*/
+#root
+{
+    margin: 5% 0;
+}
+/*other*/

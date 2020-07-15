@@ -1,0 +1,47 @@
+import format
+1) react
+2) bootstrap components
+    -> suggested order:
+        -> Container
+        -> Row
+        -> Col
+        -> Modal
+        -> Table, Cards, Carousels, Accordion, ...
+        -> Buttons, Labels, Typography, Spinner, ...
+3) my components
+    -> class based
+    -> function based
+    -< hocs
+4) helpers and registry
+
+general dom structure
+//root structure
+<root> -> main container for App.js //defined in index.js
+<container> -> main app container //defined in App.js
+//hoc structure
+<section row> -> defines a new horizontal section on the page //defined in Main.js hoc
+<col> -> defines a new vertical section in a section row //defined in Main.js hoc
+<inner component>
+//modal structure
+<modal outer row> defines overflow for page
+<modal inner col> defines inner section of modal
+<inner component>
+
+
+code cleanup 29.11.2019
+-> dom cleanup
+-> import cleanup
+
+Cockpit.js - OK
+AddPerson.js - OK
+EditPerson.js - OK
+Input.ja - OK
+Person.js - X
+Persons.js - OK
+
+code cleanup 11.12.2019
+-> css cleanup
+
+open error behaviour
+Persons.js
+rendering an element to inform the user of an empty result for persons will cause the app to crash
