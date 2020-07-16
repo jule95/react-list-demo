@@ -34,7 +34,7 @@ class FormPerson extends Component
 
     componentDidMount()
     {
-        //initialize fields for edit firm with values
+        //initialize fields for edit form with values
         if (this.props.mode === registry.EDIT_MODE)
         {
             const personToEdit = {...this.props.personToEdit};
@@ -58,16 +58,7 @@ class FormPerson extends Component
         const target = event.target;
         const values = {...this.state};
 
-        switch (target.id)
-        {
-            case "age":
-                const age = parseInt(target.value);
-                values.age.value = isNaN(age) ? 0 : age;
-                break;
-            default:
-                values[target.id].value = target.value;
-                break;
-        }
+        values[target.id].value = target.value;
 
         this.setState(values);
     };
