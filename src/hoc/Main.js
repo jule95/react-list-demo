@@ -18,16 +18,18 @@ const main = (WrappedComponent) =>
         {
             let minHeight = "";
 
-
+            //check component mode for pagination or persons
             switch (this.props.mode)
             {
                 case registry.PAGINATION_HOC:
+                    //dont display pagination if zero entries are found
                     if (this.props.totalPages === 0)
                     {
                         return null;
                     }
                     break;
                 case registry.PERSONS_HOC:
+                    //set minHeight css property if persons are found
                     minHeight = this.props.persons.length === 0 ? "" : "persons-container";
                     break;
             }
