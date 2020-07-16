@@ -41,11 +41,14 @@ class FormPerson extends Component
 
             const values = {...this.state};
 
+            //remove input declarations in state object so as to not consider them in init loop below
             delete values.inputs;
 
             for (let value in values)
             {
+                //match personToEdit properties with state values
                 values[value].value = personToEdit[value];
+                //clear error messages on component mount
                 values[value].error = "";
             }
 
@@ -67,7 +70,6 @@ class FormPerson extends Component
     {
         const values = {...this.state};
 
-        //check for target id (either name or age)
         switch (event.target.id)
         {
             case "name":
@@ -99,8 +101,15 @@ class FormPerson extends Component
         const isEmailValid = validation.validateEmail(this.state.email.value);
         const isPhoneValid = validation.validatePhone(this.state.phone.value);
 
+        //check if all user input is valid
         if (isNameValid && isDobValid && isEmailValid && isPhoneValid)
         {
+            /*
+             * check which mode the form is initialized with
+             * depending on the mode a different action will be called
+             * ADD_MODE -> addPersonHandler(person)
+             * EDIT_MODE -> editPersonHandler(personToEdit)
+             */
             switch (this.props.mode)
             {
                 case registry.ADD_MODE:
@@ -112,12 +121,15 @@ class FormPerson extends Component
                         phone: this.state.phone.value
                     };
 
+                    //add person
                     this.props.action(person);
 
                     const values = {...this.state};
 
+                    //remove input declarations in state object so as to not consider them in init loop below
                     delete values.inputs;
 
+                    //clear form and errors
                     for (let val in values)
                     {
                         values[val].value = "";
@@ -125,13 +137,16 @@ class FormPerson extends Component
                     }
                     break;
                 case registry.EDIT_MODE:
+                    //retrieve personToEdit from props
                     const personToEdit = {...this.props.personToEdit};
 
+                    //change values accordingly
                     personToEdit.name = this.state.name.value;
                     personToEdit.dob = this.state.dob.value;
                     personToEdit.email = this.state.email.value;
                     personToEdit.phone = this.state.phone.value;
 
+                    //update person
                     this.props.action(personToEdit);
                     break;
             }
@@ -148,8 +163,15 @@ class FormPerson extends Component
 
             for (let error in errors)
             {
-                values[error].value = this.state[error].value;
-                values[error].error = errors[error][0] ? "" : errors[error][1];
+                //values[error].value = this.state[error].value; <- seems to be redundant
+
+                //either true or false
+                const errorCheck = errors[error][0];
+                //contains error message
+                const errorMsg = errors[error][1];
+
+                //set error message if check has failed
+                values[error].error = errorCheck ? "" : errorMsg;
             }
 
             this.setState({values});
