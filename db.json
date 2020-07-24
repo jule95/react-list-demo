@@ -1,14 +1,6 @@
 {
   "persons": [
     {
-      "name": "Julius Plass",
-      "dob": "10.07.1995",
-      "email": "julius.plass@hotmail.com",
-      "phone": "0676 50 67 975",
-      "creation": 1594813102,
-      "id": 1
-    },
-    {
       "name": "John Doe",
       "dob": "01.01.1970",
       "email": "john@test.com",
